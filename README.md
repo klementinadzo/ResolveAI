@@ -1,4 +1,4 @@
-# Pixel Triage Buddy
+# Resolve AI
 
 [![CI](https://github.com/klementinadzo/pixel-triage-buddy/actions/workflows/ci.yml/badge.svg)](https://github.com/klementinadzo/pixel-triage-buddy/actions/workflows/ci.yml)
 
