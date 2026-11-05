@@ -1,0 +1,27 @@
+name: CI
+
+# Runs on every push and pull request: install, lint, type check, tests, build.
+# No secrets are needed: tests use stand-ins for the database and the AI.
+on:
+  push:
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - uses: oven-sh/setup-bun@v2
+      - name: Install (locked versions)
+        run: bun install --frozen-lockfile
+      - name: Lint
+        run: bun run lint
+      - name: Type check
+        run: bunx tsc --noEmit -p .
+      - name: Tests
+        run: bun run test
+      - name: Build
+        run: bun run build

@@ -1,0 +1,137 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-display: "Space Grotesk", "Inter", sans-serif;
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-risk: var(--risk);
+  --color-warn: var(--warn);
+  --color-ok: var(--ok);
+  --color-glass: var(--glass);
+  --color-glass-strong: var(--glass-strong);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+}
+
+:root {
+  --radius: 0.625rem;
+  --background: oklch(0.955 0.012 200);
+  --foreground: oklch(0.22 0.02 180);
+  --card: oklch(1 0 0 / 0.5);
+  --card-foreground: oklch(0.22 0.02 180);
+  --popover: oklch(0.98 0.006 200);
+  --popover-foreground: oklch(0.22 0.02 180);
+  --primary: oklch(0.47 0.08 183);
+  --primary-foreground: oklch(0.99 0 0);
+  --secondary: oklch(1 0 0 / 0.7);
+  --secondary-foreground: oklch(0.22 0.02 180 / 0.75);
+  --muted: oklch(1 0 0 / 0.6);
+  --muted-foreground: oklch(0.22 0.02 180 / 0.55);
+  --accent: oklch(0.6 0.13 55);
+  --accent-foreground: oklch(0.99 0 0);
+  --destructive: oklch(0.58 0.15 40);
+  --destructive-foreground: oklch(0.99 0 0);
+  --risk: oklch(0.58 0.15 40);
+  --warn: oklch(0.6 0.13 55);
+  --ok: oklch(0.47 0.08 183);
+  --glass: oklch(1 0 0 / 0.45);
+  --glass-strong: oklch(1 0 0 / 0.7);
+  --border: oklch(0.22 0.02 180 / 0.08);
+  --input: oklch(0.22 0.02 180 / 0.1);
+  --ring: oklch(0.47 0.08 183 / 0.4);
+  --chart-1: oklch(0.47 0.08 183);
+  --chart-2: oklch(0.58 0.15 40);
+  --chart-3: oklch(0.6 0.13 55);
+  --chart-4: oklch(0.7 0.06 200);
+  --chart-5: oklch(0.8 0.05 180);
+  --app-gradient: linear-gradient(
+    135deg,
+    oklch(0.92 0.02 210) 0%,
+    oklch(0.96 0.01 180) 38%,
+    oklch(0.93 0.012 210) 72%,
+    oklch(0.97 0.006 170) 100%
+  );
+  --blob-1: oklch(0.83 0.06 180);
+  --blob-2: oklch(0.9 0.04 65);
+  --blob-3: oklch(0.89 0.03 210);
+}
+
+@utility glass {
+  background-color: var(--glass);
+  backdrop-filter: blur(24px);
+  box-shadow: 0 0 0 1px var(--border);
+  border-radius: 14px;
+}
+
+@utility chip {
+  background-color: var(--glass-strong);
+  box-shadow: 0 0 0 1px var(--border);
+  border-radius: 10px;
+}
+
+@utility app-bg {
+  background: var(--app-gradient);
+}
+
+@utility eyebrow {
+  font-size: 10px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--muted-foreground);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+  }
+  .glass,
+  .chip {
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+  input,
+  select,
+  textarea {
+    max-width: 100%;
+  }
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display);
+  }
+}
