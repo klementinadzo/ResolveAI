@@ -4,7 +4,7 @@
 
 **Who it's for:** Customer Success managers who look after a portfolio of business customers, like Mara, who manages ten accounts.
 
-**Why it exists:** the warning signs of an unhappy customer are scattered across support tickets, missed follow-ups and approaching renewals, so problems are often noticed too late. Pixel Triage Buddy brings them into one place, shows which accounts need attention first and why, and uses AI to brief the manager on every ticket, so they can act before a customer is at risk.
+**Why it exists:** the warning signs of an unhappy customer are scattered across support tickets, missed follow-ups and approaching renewals, so problems are often noticed too late. Resolve AI brings them into one place, shows which accounts need attention first and why, and uses AI to brief the manager on every ticket, so they can act before a customer is at risk.
 
 [Features](#features) · [Getting started](#getting-started) · [How it works](#how-it-works) · [Docs](docs/) · [Roadmap](#limitations-and-roadmap)
 
